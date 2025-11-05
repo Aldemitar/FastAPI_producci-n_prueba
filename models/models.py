@@ -113,25 +113,25 @@ class Usuario(SQLModel, table=True):
     @validator("contraseña")
     def validar_contraseña(cls, v):
         if len(v) < 6:
-            raise ValueError("La contraseña debe tener al menos 6 caracteres.")
+            raise ValueError("La contraseña debe tener al menos 6 caracteres.")#Creación de restricciones
         return v
 
     @validator("nombre")
     def validar_nombre(cls, v):
         if not all(c.isalpha() or c.isspace() for c in v):
-            raise ValueError("El nombre solo puede contener letras y espacios.")
+            raise ValueError("El nombre solo puede contener letras y espacios.")#Creación de restricciones
         return v
 
 
 class Cita(SQLModel, table=True):
-    id: Optional[int] = Field(default=None, primary_key=True)
-    cliente_id: int = Field(foreign_key="usuario.id")
-    tecnico_id: int = Field(foreign_key="usuario.id")
-    vehiculo_id: int = Field(foreign_key="vehiculo.id")
-    fecha: date
-    hora: str
-    costo: float
-    estado: EstadoCita = Field(sa_column=Column(Enum(EstadoCita), default=EstadoCita.PENDIENTE))
+    id: Optional[int] = Field(default=None, primary_key=True)#Creación de campo
+    cliente_id: int = Field(foreign_key="usuario.id")#Creación de campo
+    tecnico_id: int = Field(foreign_key="usuario.id")#Creación de campo
+    vehiculo_id: int = Field(foreign_key="vehiculo.id")#Creación de campo
+    fecha: date#Creación de campo
+    hora: str#Creación de campo
+    costo: float#Creación de campo
+    estado: EstadoCita = Field(sa_column=Column(Enum(EstadoCita), default=EstadoCita.PENDIENTE))#Creación de campo
 
     cliente: Optional[Usuario] = Relationship(
         back_populates="citas_cliente",
