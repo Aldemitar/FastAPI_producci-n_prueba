@@ -1,18 +1,3 @@
-<div align="center">
-  <h1>Taller FastAPI</h1>
-  <p><em>Josué Ribero Duarte - 67001295</em></p>
-  <p>
-  Este proyecto es una app desarrollada en FastAPI que crea una API para consumir. 
-  
-  En este taller se realizan dos tipos de API: Una API básica y una API de ChargeFlow.
-  </p>
-
-  [![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)](https://github.com/tu-usuario/meraki/releases)
-  [![FastAPI](https://img.shields.io/badge/FastAPI-v0.118.3-green.svg)](https://github.com/tu-usuario/meraki/releases)
-  [![Python](https://img.shields.io/badge/Python-3.13.5-yellow.svg)](https://github.com/tu-usuario/meraki/releases)
-
-</div>
-
 ## Estructura del Proyecto
 
 El proyecto se organiza lógicamente por responsabilidades:
