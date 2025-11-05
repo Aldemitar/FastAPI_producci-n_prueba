@@ -43,7 +43,7 @@ backend/
 1.  **Clonar el repositorio:**
     Abre tu terminal y ejecuta el comando:
     ```bash
-    git clone https://github.com/Josue-Ribero/taller_fastapi.git
+    git clone https://github.com/Aldemitar/FastAPI_producci-n_prueba
     ```
 
 2.  **Crear un entorno virtual:**
